@@ -75,6 +75,50 @@
                             }
                         }
                         break;
+                    case 4:
+
+                        AddressBook addobj3 = new AddressBook();
+                        Console.WriteLine("::::::::::::::::::::::::::");
+
+                        bool check2 = true;
+
+                        while (check2)
+                        {
+                            Console.WriteLine("Follow Steps to add details:\n" +
+                               "1) To addContact\n" + "2) To Edit Contact\n" +
+                               "3) To Remove Contact\n" + "4) To Display Contact\n");
+
+                            int select = Convert.ToInt32(Console.ReadLine());
+                            switch (select)
+                            {
+                                case 1:
+                                    addobj3.addPerson();
+                                    Console.WriteLine(":::::::::::::::::::::::::::;");
+                                    break;
+
+                                case 2:
+                                    addobj3.EditContact();
+                                    Console.WriteLine(":::::::::::::::::::::::::::;");
+                                    break;
+
+                                case 3:
+                                    addobj3.DeleteContact();
+                                    Console.WriteLine(":::::::::::::::::::::::::::;");
+                                    break;
+
+                                case 4:
+                                    addobj3.Display();
+                                    Console.WriteLine(":::::::::::::::::::::::::::;");
+                                    break;
+
+
+                                default:
+
+                                    check = !check;
+                                    break;
+                            }
+                        }
+                        break;
 
                     default:
                         Console.WriteLine("Please select proper option");
